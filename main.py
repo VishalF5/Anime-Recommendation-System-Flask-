@@ -35,7 +35,7 @@ def hello_world():
 #recommend route
 @app.route("/recommends", methods=["POST","GET"])
 def recommends():
-    text = request.form["movie"][:5]
+    text = request.form["movie"]
     names=similarity.get(text)
     name1=names[0]
     name2=names[1]
